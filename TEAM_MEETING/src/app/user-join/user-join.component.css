@@ -1,7 +1,7 @@
-/* Container starts vertically stacked */
+
 .container {
     display: flex;
-    flex-direction: row; /* 👈 default vertical layout */
+    flex-direction: row; 
     gap: 20px;
     padding: 20px;
     border-radius: 15px;
@@ -9,10 +9,9 @@
     background: #fff;
   }
   
-  /* When screen is large enough, switch to horizontal layout */
   @media (min-width: 768px) {
     .container {
-      flex-direction: column; /* 👈 horizontal layout for tablets/laptops */
+      flex-direction: column; 
     }
   }
   
