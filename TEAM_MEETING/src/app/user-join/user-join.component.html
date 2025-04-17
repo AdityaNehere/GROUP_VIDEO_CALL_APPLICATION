@@ -1,3 +1,23 @@
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+<div class="container">
+    <div class="video-panel">
+      <p class="camera-text">Camera is off</p>
+      <div class="controls">
+        <button><i class="material-icons">mic_off</i></button>
+        <button><i class="material-icons">videocam_off</i></button>
+        <button><i class="material-icons">more_horiz</i></button>
+      </div>
+    </div>
+  
+    <div class="join-panel">
+      <h2><b>Join Room</b></h2>
+      <input type="text"  placeholder="Enter Room ID" [(ngModel)]="ROOM_ID" />
+      <button class="join-button" (click)="JoinMeeting(ROOM_ID)">Join</button>
+  
+      <h3><b>Share the link</b></h3>
+      <div class="link-box">
+        <span>https://test</span>
+        <button><i class="material-icons">content_copy</i></button>
+      </div>
+    </div>
+  </div>
+  

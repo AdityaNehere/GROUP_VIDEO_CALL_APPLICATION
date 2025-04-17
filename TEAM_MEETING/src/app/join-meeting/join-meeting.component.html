@@ -1,1 +1,46 @@
-<p>join-meeting works!</p>
+<div class="video-call-container">
+    <!-- Avatar Section -->
+    <div class="video-section">
+      <div class="avatar-circle">{{ this.Common.setUserName }}</div>
+    </div>
+  
+    <!-- Image Grid -->
+    <div class="image-grid">
+      <div class="image-item" *ngFor="let image of images">
+        <img [src]="image.src" alt="{{image.Name}}" style="height: 200px;width:auto;" />
+      </div>
+    </div>
+  
+    <!-- Controls -->
+    <div class="controls">
+      <button class="control-btn"><i class="fas fa-microphone-slash"></i></button>
+      <button class="control-btn"><i class="fas fa-video-slash"></i></button>
+      <button class="control-btn"><i class="fas fa-desktop"></i></button>
+      <button class="control-btn"><i class="fas fa-ellipsis-h"></i></button>
+      <button class="end-call-btn" (click)="ConformationPopUp()"><i class="fas fa-phone-slash"></i></button>
+    </div>
+  
+    <!-- Bottom Right Panel -->
+    <div class="bottom-right-panel">
+      <div class="user-label">
+        <i class="fas fa-microphone-slash"></i> {{ this.Common.setUserName }} (You)
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="overlay" *ngIf="showPopup" >
+    <div class="popup" >
+      <div class="popup-header">
+        <span class="popup-title">{{ title }}</span>
+        <button class="close-btn" (click)="closePopup()">X</button>
+      </div>
+      <div class="popup-content">
+        <p>{{ message }}</p>
+      </div>
+      <div class="popup-footer">
+        <button class="cancel-btn" (click)="closePopup()">Cancel</button>
+        <button class="confirm-btn" (click)="onConfirm()">Confirm</button>
+      </div>
+    </div>
+  </div>
