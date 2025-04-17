@@ -1,0 +1,104 @@
+/* Container starts vertically stacked */
+.container {
+    display: flex;
+    flex-direction: row; /* 👈 default vertical layout */
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    background: #fff;
+  }
+  
+  /* When screen is large enough, switch to horizontal layout */
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: column; /* 👈 horizontal layout for tablets/laptops */
+    }
+  }
+  
+  
+  .video-panel, .join-panel {
+    flex: 1 1 300px;
+    margin: 10px;
+    border-radius: 15px;
+  }
+  
+  .video-panel {
+    background: #141626;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+  }
+  
+  .camera-text {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: auto;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    bottom: 20px;
+  }
+  
+  .controls button {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .join-panel {
+    padding: 20px;
+  }
+  
+  .join-panel h2, .join-panel h3 {
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+  }
+  
+  .join-button {
+    background: #005eff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  max-width: 100px; 
+  }
+  
+  .link-box {
+    background: #f0f2f5;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .link-box button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
